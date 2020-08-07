@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class DashboardsController < ApplicationController
   def home
   end
 
@@ -8,3 +8,4 @@ class StaticPagesController < ApplicationController
   def about
   end
 end
+

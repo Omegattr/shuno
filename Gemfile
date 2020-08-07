@@ -35,9 +35,6 @@ gem 'bootstrap-sass', '3.4.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
-
 gem "activesupport", "5.2.4.2"
 
 gem 'devise'
@@ -78,6 +75,9 @@ end
 
 group :production do
   gem 'pg', '< 1.0.0'
+
+  # Reduces boot times through caching; required in config/boot.rb
+  gem 'bootsnap', '>= 1.1.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
