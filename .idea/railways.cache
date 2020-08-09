@@ -15,6 +15,22 @@
                           PATCH  /users/:id(.:format)                                                                     users#update
                           PUT    /users/:id(.:format)                                                                     users#update
                           DELETE /users/:id(.:format)                                                                     users#destroy
+            storage_boxes GET    /storage_boxes(.:format)                                                                 storage_boxes#index
+                          POST   /storage_boxes(.:format)                                                                 storage_boxes#create
+          new_storage_box GET    /storage_boxes/new(.:format)                                                             storage_boxes#new
+         edit_storage_box GET    /storage_boxes/:id/edit(.:format)                                                        storage_boxes#edit
+              storage_box GET    /storage_boxes/:id(.:format)                                                             storage_boxes#show
+                          PATCH  /storage_boxes/:id(.:format)                                                             storage_boxes#update
+                          PUT    /storage_boxes/:id(.:format)                                                             storage_boxes#update
+                          DELETE /storage_boxes/:id(.:format)                                                             storage_boxes#destroy
+                    goods GET    /goods(.:format)                                                                         goods#index
+                          POST   /goods(.:format)                                                                         goods#create
+                 new_good GET    /goods/new(.:format)                                                                     goods#new
+                edit_good GET    /goods/:id/edit(.:format)                                                                goods#edit
+                     good GET    /goods/:id(.:format)                                                                     goods#show
+                          PATCH  /goods/:id(.:format)                                                                     goods#update
+                          PUT    /goods/:id(.:format)                                                                     goods#update
+                          DELETE /goods/:id(.:format)                                                                     goods#destroy
        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
 rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
        rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show

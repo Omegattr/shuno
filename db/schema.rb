@@ -10,7 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_155456) do
+ActiveRecord::Schema.define(version: 2020_08_09_235630) do
+
+  create_table "group_users", force: :cascade do |t|
+    t.integer "group_id"
+    t.integer "user_id"
+    t.integer "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "item_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "storage_box_id"
+    t.datetime "created_at"
+  end
+
+  create_table "storage_box_contents", force: :cascade do |t|
+    t.integer "storage_box_id", null: false
+    t.string "item_name", null: false
+    t.integer "item_count", null: false
+    t.integer "item_category_id", null: false
+    t.string "item_note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "storage_boxes", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "user_id"
+    t.integer "group_id"
+    t.integer "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
